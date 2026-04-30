@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MediTrack — Clinic Dashboard</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet" />
+  <link rel="stylesheet" href="css/custom.css" />
+</head>
+<body>
+
+  
+  <nav class="navbar navbar-expand-lg site-nav">
+    <div class="container-fluid px-4">
+      <a class="navbar-brand d-flex align-items-center gap-2" href="#">
+        <div class="brand-cross">
+          <i class="bi bi-plus-lg"></i>
+        </div>
+        MediTrack
+      </a>
+      <button class="navbar-toggler border-0" type="button"
+        data-bs-toggle="collapse" data-bs-target="#mainNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-1">
+          <li class="nav-item"><a class="nav-link active" href="#"><i class="bi bi-house-door me-1"></i>Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#appointments"><i class="bi bi-calendar2-check me-1"></i>Appointments</a></li>
+          <li class="nav-item"><a class="nav-link" href="#doctors"><i class="bi bi-people me-1"></i>Doctors</a></li>
+          <li class="nav-item"><a class="nav-link" href="#stats"><i class="bi bi-bar-chart me-1"></i>Stats</a></li>
+        </ul>
+        <button class="btn btn-book ms-3"
+          data-bs-toggle="modal" data-bs-target="#contactModal">
+          <i class="bi bi-calendar-plus me-1"></i> Book Consultation
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  
+  <header class="hero-section">
+    <div class="hero-pattern"></div>
+    <div class="hero-circle hc-1"></div>
+    <div class="hero-circle hc-2"></div>
+    <div class="container hero-content">
+      <div class="row align-items-center">
+        <div class="col-lg-7">
+          <span class="activity-pill mb-3 d-inline-flex align-items-center gap-2">
+            <span class="pulse-ring"></span>
+            Activity 1 &nbsp;·&nbsp; Healthcare Dashboard
+          </span>
+          <h1 class="hero-title">Your Health,<br><em class="hero-em">Our Priority.</em></h1>
+          <p class="hero-sub">
+            MediTrack connects patients with top specialists, streamlines appointment scheduling,
+            and keeps your medical records always within reach.
+          </p>
+          <div class="d-flex flex-wrap gap-3 mt-4">
+            <button class="btn btn-primary-custom"
+              data-bs-toggle="modal" data-bs-target="#contactModal">
+              <i class="bi bi-calendar-heart me-2"></i>Book an Appointment
+            </button>
+            <a href="#appointments" class="btn btn-ghost-custom">
+              View Schedule <i class="bi bi-arrow-right ms-1"></i>
+            </a>
+          </div>
+        </div>
+        <div class="col-lg-5 d-none d-lg-flex justify-content-end">
+          <div class="hero-card-float">
+            <div class="hcf-icon"><i class="bi bi-heart-pulse"></i></div>
+            <div>
+              <div class="hcf-label">Patients Served Today</div>
+              <div class="hcf-value">142</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  
+  <section class="stats-section" id="stats">
+    <div class="container">
+      <div class="row g-3">
+        <div class="col-6 col-md-3">
+          <div class="stat-card">
+            <div class="stat-icon si-teal"><i class="bi bi-person-check"></i></div>
+            <div class="stat-number">3,842</div>
+            <div class="stat-label">Active Patients</div>
+          </div>
+        </div>
+        <div class="col-6 col-md-3">
+          <div class="stat-card">
+            <div class="stat-icon si-blue"><i class="bi bi-hospital"></i></div>
+            <div class="stat-number">98</div>
+            <div class="stat-label">Beds Available</div>
+          </div>
+        </div>
+        <div class="col-6 col-md-3">
+          <div class="stat-card">
+            <div class="stat-icon si-green"><i class="bi bi-emoji-smile"></i></div>
+            <div class="stat-number">96%</div>
+            <div class="stat-label">Satisfaction Rate</div>
+          </div>
+        </div>
+        <div class="col-6 col-md-3">
+          <div class="stat-card">
+            <div class="stat-icon si-purple"><i class="bi bi-clock-history"></i></div>
+            <div class="stat-number">12yr</div>
+            <div class="stat-label">Years in Service</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  
+  <main class="container section-wrap" id="appointments">
+    <div class="section-header">
+      <span class="section-eyebrow">Schedule</span>
+      <h2 class="section-title">Upcoming Appointments</h2>
+    </div>
+
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="appt-card">
+          <div class="appt-banner ab-teal">
+            <i class="bi bi-lungs"></i>
+            <div class="appt-banner-bg"></div>
+          </div>
+          <div class="appt-body">
+            <span class="appt-tag at-teal">Pulmonology</span>
+            <h5 class="appt-title">Respiratory Check-Up</h5>
+            <p class="appt-desc">Comprehensive lung function assessment including spirometry, chest X-ray review, and personalized breathing therapy plan.</p>
+            <div class="appt-meta">
+              <span><i class="bi bi-calendar3 me-1"></i>May 5, 2026</span>
+              <span><i class="bi bi-clock me-1"></i>9:00 AM</span>
+            </div>
+            <div class="appt-progress-wrap">
+              <div class="appt-progress-track">
+                <div class="appt-progress-fill apf-teal" style="width:80%"></div>
+              </div>
+              <span class="appt-pct">80% booked</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="appt-card">
+          <div class="appt-banner ab-rose">
+            <i class="bi bi-heart-pulse"></i>
+            <div class="appt-banner-bg"></div>
+          </div>
+          <div class="appt-body">
+            <span class="appt-tag at-rose">Cardiology</span>
+            <h5 class="appt-title">Cardiac Screening</h5>
+            <p class="appt-desc">Full cardiovascular evaluation with ECG monitoring, blood pressure analysis, and cholesterol panel for preventive care.</p>
+            <div class="appt-meta">
+              <span><i class="bi bi-calendar3 me-1"></i>May 7, 2026</span>
+              <span><i class="bi bi-clock me-1"></i>10:30 AM</span>
+            </div>
+            <div class="appt-progress-wrap">
+              <div class="appt-progress-track">
+                <div class="appt-progress-fill apf-rose" style="width:62%"></div>
+              </div>
+              <span class="appt-pct">62% booked</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="appt-card">
+          <div class="appt-banner ab-amber">
+            <i class="bi bi-bandaid"></i>
+            <div class="appt-banner-bg"></div>
+          </div>
+          <div class="appt-body">
+            <span class="appt-tag at-amber">Orthopedics</span>
+            <h5 class="appt-title">Joint & Bone Clinic</h5>
+            <p class="appt-desc">Specialized musculoskeletal consultation covering joint pain, fracture recovery, physiotherapy planning, and mobility assessment.</p>
+            <div class="appt-meta">
+              <span><i class="bi bi-calendar3 me-1"></i>May 10, 2026</span>
+              <span><i class="bi bi-clock me-1"></i>2:00 PM</span>
+            </div>
+            <div class="appt-progress-wrap">
+              <div class="appt-progress-track">
+                <div class="appt-progress-fill apf-amber" style="width:45%"></div>
+              </div>
+              <span class="appt-pct">45% booked</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    
+    <div class="section-header mt-5" id="doctors">
+      <span class="section-eyebrow">Medical Team</span>
+      <h2 class="section-title">Our Specialists</h2>
+    </div>
+
+    <div class="row g-4">
+      <div class="col-6 col-md-3">
+        <div class="doctor-card">
+          <div class="doc-avatar da-teal">DR</div>
+          <h6 class="doc-name">Dr. Rosa Dela Cruz</h6>
+          <small class="doc-spec">Pulmonologist</small>
+          <div class="doc-badge"><i class="bi bi-star-fill me-1"></i>4.9</div>
+        </div>
+      </div>
+      <div class="col-6 col-md-3">
+        <div class="doctor-card">
+          <div class="doc-avatar da-rose">JM</div>
+          <h6 class="doc-name">Dr. James Mendoza</h6>
+          <small class="doc-spec">Cardiologist</small>
+          <div class="doc-badge"><i class="bi bi-star-fill me-1"></i>4.8</div>
+        </div>
+      </div>
+      <div class="col-6 col-md-3">
+        <div class="doctor-card">
+          <div class="doc-avatar da-amber">AL</div>
+          <h6 class="doc-name">Dr. Anika Lim</h6>
+          <small class="doc-spec">Orthopedic Surgeon</small>
+          <div class="doc-badge"><i class="bi bi-star-fill me-1"></i>4.7</div>
+        </div>
+      </div>
+      <div class="col-6 col-md-3">
+        <div class="doctor-card">
+          <div class="doc-avatar da-green">CS</div>
+          <h6 class="doc-name">Dr. Carlo Santos</h6>
+          <small class="doc-spec">General Physician</small>
+          <div class="doc-badge"><i class="bi bi-star-fill me-1"></i>4.9</div>
+        </div>
+      </div>
+    </div>
+
+   
+    <div class="text-center mt-5 pb-2">
+      <button class="btn btn-cta"
+        data-bs-toggle="modal" data-bs-target="#contactModal">
+        <i class="bi bi-calendar-plus me-2"></i>Request a Consultation
+      </button>
+    </div>
+  </main>
+
+  
+  <footer class="site-footer">
+    <p class="mb-0">
+      &copy; 2026 MediTrack &mdash; Built with
+      <i class="bi bi-heart-fill text-danger mx-1"></i>
+      using Bootstrap 5 | Lorreine Boncodin
+    </p>
+  </footer>
+
+  
+  <div class="modal fade" id="contactModal" tabindex="-1"
+    aria-labelledby="contactModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content modal-custom border-0">
+
+        <div class="modal-header modal-custom-header">
+          <div class="d-flex align-items-center gap-2">
+            <div class="brand-cross sm"><i class="bi bi-plus-lg"></i></div>
+            <h5 class="modal-title fw-bold mb-0" id="contactModalLabel">Book a Consultation</h5>
+          </div>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        </div>
+
+        <div class="modal-body p-4">
+          <p class="modal-sub">Fill out the form below and our team will confirm your appointment within 24 hours.</p>
+          <form id="contactForm" class="needs-validation" novalidate>
+
+            <div class="mb-3">
+              <label for="inputName" class="form-label field-label">
+                <i class="bi bi-person me-1"></i>Patient Full Name
+              </label>
+              <input type="text" class="form-control field-input" id="inputName"
+                placeholder="e.g. Juan dela Cruz" required />
+              <div class="invalid-feedback"><i class="bi bi-exclamation-circle me-1"></i>Please enter your full name.</div>
+              <div class="valid-feedback">Looks good!</div>
+            </div>
+
+            <div class="mb-3">
+              <label for="inputEmail" class="form-label field-label">
+                <i class="bi bi-envelope me-1"></i>Email Address
+              </label>
+              <input type="email" class="form-control field-input" id="inputEmail"
+                placeholder="you@example.com" required />
+              <div class="invalid-feedback"><i class="bi bi-exclamation-circle me-1"></i>Please enter a valid email address.</div>
+              <div class="valid-feedback">Looks good!</div>
+            </div>
+
+            <div class="mb-3">
+              <label for="inputMessage" class="form-label field-label">
+                <i class="bi bi-chat-text me-1"></i>Describe Your Concern
+                <small class="text-muted fw-normal">(min. 20 characters)</small>
+              </label>
+              <textarea class="form-control field-input" id="inputMessage"
+                rows="4" placeholder="Please describe your symptoms or reason for visit..."
+                required minlength="20"></textarea>
+              <div class="invalid-feedback" id="messageError">
+                <i class="bi bi-exclamation-circle me-1"></i>Message must be at least 20 characters.
+              </div>
+              <div class="valid-feedback">Thank you!</div>
+              <div class="form-text text-end">
+                <span id="charCount">0</span> / 20 characters minimum
+              </div>
+            </div>
+
+            <div id="successAlert" class="alert alert-success d-none" role="alert">
+              <i class="bi bi-check-circle-fill me-2"></i>
+              <strong>Appointment requested!</strong> We'll confirm within 24 hours.
+            </div>
+
+          </form>
+        </div>
+
+        <div class="modal-footer border-0 px-4 pb-4">
+          <button type="button" class="btn btn-modal-close" data-bs-dismiss="modal">
+            <i class="bi bi-x-lg me-1"></i>Cancel
+          </button>
+          <button type="button" class="btn btn-modal-submit" id="submitBtn">
+            <i class="bi bi-calendar-check me-1"></i>Confirm Booking
+          </button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/validation.js"></script>
+</body>
+</html>
